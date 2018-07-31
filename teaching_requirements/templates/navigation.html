@@ -1,0 +1,32 @@
+{% load i18n %}
+
+  <header id="header">
+    <div class="wrap">
+      <div id="site-name">
+        <a class="ir-fixed" rel="home" title="Home" href="http://www.fri.uni-lj.si">FRI website</a>
+      </div>
+      <div id="header-primary" class="cf">
+        <div class="l-main">
+          <div class="region region-headermain">
+	        <div id="block-views-custom-menus-block-1" class="block block-views">
+              <div class="content">
+		        <div class="view view-custom-menus view-id-custom_menus view-display-id-block_1 l-secondary view-dom-id-76a60622d75e2ea2cb6e4e372611c894">
+            	  <div class="view-content">
+		            <ul class="menu">
+                      {% if request.user.is_authenticated %}
+                      <li class="leaf"><a href={{LOGOUT_URL}}>{% trans "Logout" %}</a></li>
+                      {% else %}
+                      <li class="leaf"><a href={{LOGIN_URL}}>{% trans "Login" %}</a></li>
+                      {% endif %}
+		            </ul>
+                  </div>
+		        </div>
+	          </div>
+            </div>
+            <div id="block-views-custom-menus-block-2" class="block block-views"></div>
+          </div>
+        </div>
+        <div class="l-aside"> </div>
+      </div>
+    </div>
+  </header>

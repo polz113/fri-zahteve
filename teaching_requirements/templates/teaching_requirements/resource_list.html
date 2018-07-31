@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Zahteve{% endblock %}
+{% block body %}
+
+
+<script type="text/javascript">
+        function tableHide(tableid){ document.getElementById(tableid).display = "none";}
+        function tableShow(tableid){ document.getElementById(tableid).display = "block";}
+</script>
+
+
+<link href="{{STATIC_URL}}css/cycles_overview.css" type="text/css" media="all" rel="stylesheet" />
+
+<h1>Možne zahteve</h1>
+<div>
+{% for resource in object_list %}
+<div>
+  <h2>{{resource.name}}</h2>
+  <div>
+  <h3>Na voljo v:</h3>
+  <ul>
+  {% for classroom in resource.classroom_set.all %}
+    <li>{{classroom}}</li>
+  {% endfor%}
+  </ul>
+  </div>
+  <div>
+  <h3>Potrebno za:</h3>
+  <ul>
+  {% for activity in resource.activity_set.all %}
+    <li>{{activity}}</li>
+  {% endfor%}
+  </ul>
+  </div>
+
+</div>
+{% endfor %}
+</div>
+{% endblock %}

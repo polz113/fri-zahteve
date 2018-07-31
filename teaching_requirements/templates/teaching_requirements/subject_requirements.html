@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Izbira predmeta{% endblock %}
+{% block body %}
+
+
+<script type="text/javascript">
+        function tableHide(tableid){ document.getElementById(tableid).display = "none";}
+        function tableShow(tableid){ document.getElementById(tableid).display = "block";}
+</script>
+
+
+<link href="{{STATIC_URL}}css/cycles_overview.css" type="text/css" media="all" rel="stylesheet" />
+
+<h1>Podatki o predmetih</h1>
+<div>
+    <table class="subjects_cycles_overview">
+        <tr>
+            <th>subject</th>
+        </tr>
+{% for subject in object_list %}
+       <tr>
+           <td>{{subject}}</td>
+       </tr>
+{% endfor %}
+    </table>
+
+</div>
+{% endblock %}

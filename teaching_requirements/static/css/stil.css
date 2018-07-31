@@ -1,0 +1,1137 @@
+@font-face {
+    font-family: 'Klavika-Regular';
+    src: url('../fonts/Klavika/klavika-regular-webfont.eot');
+    src: url('../fonts/Klavika/klavika-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-regular-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-MediumCond';
+    src: url('../fonts/Klavika/klavika-mediumcond-webfont.eot');
+    src: url('../fonts/Klavika/klavika-mediumcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-mediumcond-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-mediumcond-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-mediumcond-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-Light';
+    src: url('../fonts/Klavika/klavika-light-webfont.eot');
+    src: url('../fonts/Klavika/klavika-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-light-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-light-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-BoldCondensed';
+    src: url('../fonts/Klavika/klavika-boldcond-webfont.eot');
+    src: url('../fonts/Klavika/klavika-boldcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-boldcond-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-boldcond-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-boldcond-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-Bold';
+    src: url('../fonts/Klavika/klavika-bold-webfont.eot');
+    src: url('../fonts/Klavika/klavika-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-bold-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-bold-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-Medium';
+    src: url('../fonts/Klavika/klavika-medium-webfont.eot');
+    src: url('../fonts/Klavika/klavika-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-medium-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-medium-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-LightCond';
+    src: url('../fonts/Klavika/klavika-lightcond-webfont.eot');
+    src: url('../fonts/Klavika/klavika-lightcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-lightcond-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-lightcond-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-lightcond-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Klavika-LightItalic';
+    src: url('../fonts/Klavika/klavika-lightitalic-webfont.eot');
+    src: url('../fonts/Klavika/klavika-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Klavika/klavika-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/Klavika/klavika-lightitalic-webfont.woff') format('woff'),
+         url('../fonts/Klavika/klavika-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'fri-iconf';
+    src: url('../fonts/fri-iconf.eot');
+    src: url('../fonts/fri-iconf.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fri-iconf.woff') format('woff'),
+         url('../fonts/fri-iconf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('../fonts/Veranda/verdanab.ttf');
+}
+p{
+    margin:0px;
+    padding:0px;
+    margin-bottom: 5px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    font-family: "Klavika-Regular";
+}
+#upper-head-wrap{
+    width:100%;
+    height:42px;
+    background-image: linear-gradient(to right, #cecfce 30%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 8px 2px;
+    text-decoration:none;
+    background-repeat: repeat-x;
+}
+#upper-head-wrap a{
+    text-decoration:none;
+    color: #999;
+}
+#upper-head-wrap .right >div.dot {
+	padding-right:1px;
+	padding-left:1px;
+	background-image: url(../images/dot-upperhead.png);
+	background-repeat:no-repeat;
+	background-position: center;
+    height: 42px;   
+	
+}
+#upper-head-wrap .left >div.dot {
+	padding-right:1px;
+	padding-left:1px;
+	background-image: url(../images/dot-upperhead.png);
+	background-repeat:no-repeat;
+	background-position: center;
+    height: 42px;   
+}
+
+
+#upper-head-wrap .right >div {
+	padding-right:10px;
+	padding-left:10px;
+	
+}
+
+#upper-head-wrap .right > div:nth-last-child(1){
+	padding-right: 0;
+}
+
+#upper-head-wrap div.first {
+	padding-right:10px;
+	padding-left:0px;
+}
+#upper-head-wrap div.last {
+	padding-right:0px;
+	padding-left:10px;
+}
+#upper-head-wrap div.search-head, .search-head{
+    
+	cursor:pointer;
+	padding-left:24px;
+	    height: 42px;
+	position:relative;
+	/*background-image: url(../images/search-icon.png);
+	background-repeat:no-repeat;
+	background-position: 10px center;*/
+}
+#upper-head-wrap div.search-head:before{
+	font-family: "fri-iconf";
+	content:"";
+	position:absolute;
+	top:0px;
+	left:10px;
+	color:#b2b2b2;
+	font-size:13px;
+}
+.main-mobile-search .search-head {
+	padding-left:0px;
+	height: auto;
+	background-image: none;
+}
+#upper-head-wrap div.search-head form > input, .search-head form > input{
+	outline: 0;
+	width: 0;
+	border:0;
+    overflow: hidden;
+    opacity: 1;
+	-webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+}
+#upper-head-wrap div#search-head:hover form > input, #search-head:hover form > input, .main-mobile-search form > input, #upper-head-wrap div#search-head form > input:focus{ 
+	width: 150px;
+	opacity:1;
+    border:0px solid #999;
+    background-color: #999;
+    color: white;
+    padding: 5px;
+    margin-left:10px;
+}
+
+#upper-head-wrap > div{
+    height:inherit;
+}
+#upper-head-wrap > div > div{
+    line-height:  42px;
+    font-size: 12px;
+    font-family: Verdana,Geneva,sans-serif; 
+    font-style: normal;
+	font-variant: normal;
+    color:#999;
+}
+.navigation{
+    position:relative;
+    height:120px;
+}
+#main-nav{
+    position: absolute;
+    bottom: 0px;    
+    right: 0px;
+    height:50px;
+    float:right;
+    width: 800px;
+    font-family: "Klavika-Regular";
+    
+}
+#main-nav > .block > ul{
+    list-style-type: none;
+    display: table;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav > .block > ul > li{
+    display: table-cell;
+    text-align: center;
+}
+
+#main-nav > .block > ul > li:last-child{
+    text-align: right;
+}
+#main-nav > .block > ul > li > a{
+    font-family: "Klavika-Medium";
+    line-height: 50px;
+    margin:0px 22px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#main-nav > .block > ul > li > a:hover {
+    color: #E12A26;
+}
+
+.i18n-en #main-nav > .block > ul > li > a{
+    margin:0px 2px;
+}
+
+.container{
+    max-width: 1160px;
+    margin: 0px auto;
+}
+
+
+.left{ 
+    float:left;
+}
+.right{ 
+    float:right;
+}
+.logo{
+    position:absolute;
+    bottom: -3px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    height: 99px;
+    -ms-interpolation-mode: nearest-neighbor;
+    /*width: 285px;*/
+}
+.bxslider5{
+    margin: 0px;   
+}
+.header-images{
+    position: relative; 
+    margin-top: 22px;
+    height:350px;
+    background-color: #e12a26;
+    
+}
+#novice-normal .right-news{
+    margin-left:20px;
+}
+
+.header-image-text{
+    float:left;
+    height:inherit;
+    width: 33%;
+}
+.header-image-text > div{
+    color:white;
+    /*padding: 58px;*/
+    font-family:'Verdana';
+}
+.header-image-text  div.moreButtonBanner {
+	position: absolute;
+	top:270px;
+	border: solid 1px white;
+	border-radius: 2px;
+	left: 118px;
+	color:white ;
+	font-family: "Klavika-Bold";
+    font-size: 14px;
+    padding: 11px 20px 9px;
+    line-height: 14px;
+       
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.header-image-text  div.moreButtonBanner:hover, .moreButtonBannerMobile:hover {
+	color: #e12a26;
+    background-color: white;
+    cursor: pointer;
+}
+.header-image-text > div > h1{
+    text-transform: uppercase;
+    font-family: "Klavika-Regular";
+    margin: 0px;
+    line-height: 40px;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+.header-image-text > div > p{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.header-image-image{
+    float:right;
+    background-image: url(../images/header-image-1.jpg);
+    background-position: center;
+    background-size: cover; 
+    height:inherit;
+    width:66%;
+    
+}
+.clear{
+    clear: both;   
+}
+
+
+/*main*/
+#main{
+    margin-top:30px;
+    
+}
+
+.main{
+    margin-top:30px;
+    
+}
+
+#PriditeNaFri{
+    overflow: hidden;
+}
+#novice-normal > div:first-child{
+    
+}
+#novice-normal > div:last-child{
+    
+}
+.heading-article{
+    font-size: 27px;
+    text-transform: uppercase;
+}
+.heading-article ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.heading-article ul li {
+	font-family: "Klavika-Regular" !important;
+	font-size: 27px !important;
+	color:#333333;
+	font-weight:normal !important;
+    background-image: url(../images/bullet-heading.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 0px 10px !important; 
+    padding-left: 26px !important;
+    
+    line-height: 1.2em !important;
+}
+
+@media screen and (max-width: 400px){
+	.heading-article ul li{
+		font-size: 25px;
+		background-position:0px 8px;
+	}
+}
+
+#PriditeNaFri .content{
+    width: 864px; 
+    margin-top:10px;
+    float: left;
+}
+#PriditeNaFri .content2{
+    width: 296px; 
+    margin-top:10px;
+    float: left;
+}
+
+#PriditeNaFri .content .flex-container{
+    width: 864px; 
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	
+ 	
+ 	-webkit-flex-direction:row;
+    flex-direction:row;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content:space-between;
+    justify-content: space-between;
+}
+#PriditeNaFri .content2 .flex-container{
+     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	
+ 	-webkit-flex-direction:row;
+    flex-direction:row;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.flex-item-bigger{
+    margin-bottom: 20px;
+    width: 100%;  /* Or whatever */
+    height: 294px; /* Or whatever */
+    background-color: #e12a26;
+}
+.flex-item{
+    margin-bottom: 20px;
+    width: 273px;  /* Or whatever */
+    height: 137px; /* Or whatever */
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 1160px) {
+    #PriditeNaFri .content{
+        margin-top:10px;
+        width: 100%; 
+        float:none;
+    
+    }
+    #PriditeNaFri .content2{
+        width: 100%; 
+        float:none;
+    }
+    #PriditeNaFri .content2 .flex-container{
+    	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	 	display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;
+        
+        -webkit-flex-direction:row;
+        flex-direction:row;
+        
+        -webkit-flex-wrap:wrap;
+        flex-wrap:wrap;
+        
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+}
+
+
+
+.beforecontainer-background{
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.FriMedLjudmi-hompage{
+	background-color: #f1f1f1;
+}
+
+
+
+
+.TekmovalniDuh-hompage{
+	padding-top:0px;
+	padding-bottom:0px;
+	background-image: url('../images/IMG_3051.jpg');
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	color:white;
+	
+}
+.TekmovalniDuh-hompage .overlay{
+	padding-top:30px;
+	padding-bottom:25px;
+	background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+.TekmovalniDuh-hompage a:-webkit-any-link{
+	color:white;
+	text-decoration: underline;
+}
+
+#TekmovalniDuh-hompage .heading-article ul li{
+	color:white;
+}
+#TekmovalniDuh-hompage .content{
+	margin-top:30px;
+	
+	 display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	
+ 	-webkit-flex-direction:row;
+	flex-direction: row;
+	
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+#TekmovalniDuh-hompage .content .sub-content{
+	width: calc(50% - 11px);
+	font-size: 14px;
+    font-family: 'Verdana';
+    line-height: 1.5em;
+}
+
+@media screen and (max-width: 619px){
+    
+    #TekmovalniDuh-hompage .content .sub-content{
+        width: auto;
+    }
+}
+#TekmovalniDuh-hompage .content .sub-content a.link{
+	color:white;
+	text-decoration: none;
+    position: relative;	
+}
+#TekmovalniDuh-hompage .content .sub-content a.link:hover{
+	color:#e12a26;
+}
+#TekmovalniDuh-hompage .content .sub-content a.link:after {
+    content: ' ';
+    color: white;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-width: 0 0 1px;
+    border-style: solid;
+}
+#TekmovalniDuh-hompage .content .sub-content a.link:hover:after {
+    color: #e12a26;
+}
+
+#TekmovalniDuh-hompage .content  .content-flex{
+	margin-top:5px;
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+#TekmovalniDuh-hompage .btn {
+	display:inline-block;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  font-family: "Klavika-Bold";
+  color: #ffffff;
+  font-size: 14px;
+  line-height:14px;
+  padding: 11px 25px 9px 25px;
+  border: solid #ffffff 1px;
+  text-decoration: none;
+}
+
+#TekmovalniDuh-hompage .btn:hover {
+ 	cursor:pointer;
+ 	color: rgba(255,255,255,0.5);
+ 	border: solid rgba(255,255,255,0.5) 1px;
+}
+
+
+
+
+
+.Obvestila-hompage{
+	background-color: #f1f1f1;
+	padding-bottom:15px;
+}
+.Obvestila-hompage .container{
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	
+ 	-webkit-flex-direction: row;
+	flex-direction: row;
+	
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.Obvestila-hompage .container > section{
+	width: calc(50% - 11px);
+}
+
+.Obvestila-hompage .container .list{
+	margin-top: 20px;
+}
+
+.Obvestila-hompage .container .list article .heading a:any-link{
+    
+}
+.Obvestila-hompage .container .list article{
+	
+	color:#333333;
+	
+	margin-top:20px;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	
+ 	-webkit-flex-direction: row;
+	flex-direction: row;
+	
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+/*.Obvestila-hompage .container .list article .date{
+	background-image: url('../images/calander-hompage.png');
+	width:68px;
+	height:71px;
+	
+	text-align:center;
+	
+	text-transform:lowercase;
+	
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    
+    flex-direction: column;
+    
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center;
+    
+}
+.Obvestila-hompage .container .list article .date div:first-child{
+	font-size: 27px;
+	font-family: "Klavika-Bold";
+	margin-bottom: -4px;
+    margin-top: 5px;
+}
+.Obvestila-hompage .container .list article .date div:nth-child(2){
+	font-family:'Klavika-Light';
+	font-size:18px;
+}*/
+.Obvestila-hompage .container .list article .content{
+	width:calc( 100% - 88px);
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    position: relative;
+    
+    /*-webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center;*/
+    
+}
+.Obvestila-hompage .container .list article .content .time{
+	color:#7f7f7f;
+	font-family: "Klavika-Light";
+	/*margin-top: 25px;*/
+	width: 100%;
+    height: 20px;
+	font-size: 18px;
+}
+.Obvestila-hompage .container .list article .content .heading{
+	font-family: "Klavika-Medium";
+	width:100%;
+    margin-top: 1px;
+}
+
+.Obvestila-hompage .container .list article .content .heading a:hover {
+	color: #E12A26 !important;
+}
+
+.Obvestila-hompage .container .list .more{
+	font-family: "Klavika-Regular";
+	color:#545454;
+	padding: 17px 30px 17px 0px;; 
+	border-top: 1px solid #e2e2e3;
+	display: inline-block;
+	margin-top:30px;
+	background-image: url('../images/arrow-right.png');
+	background-position:right center;
+	background-repeat:no-repeat;
+	text-transform: uppercase;
+}
+.Obvestila-hompage .container .list .more:hover{
+	cursor:pointer;
+}
+
+.footer-grayed{
+    color: #777777;
+}
+#footer-location{
+    color: #ffffff;
+    /*background-color: #000000;*/
+   	background-color: #333333;
+    padding: 10px;
+    font-size: 20px;
+}
+#footer-location .container{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	
+ 	-webkit-flex-direction: row;
+    flex-direction:row;
+    
+    -webkit-flex-wrap: wrap;
+    flex-wrap:wrap;
+    
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    
+}
+#footer-location .container .child{
+    /*min-width: 200px;*/
+   font-size: 16px;
+    padding-top: 10px;
+	padding-bottom: 10px;
+    font-family: "Klavika-LightCond";
+}
+
+#footer-location .container .child:nth-child(n+2){	
+    margin-top: 15px;
+}
+
+#footer-location .container .child p.info{
+    font-family: "Klavika-Light";
+}
+#footer-location .container .child p.info a{
+    font-family: "Klavika-LightCond";
+    margin-right: 5px
+}
+#footer-location .container .child .lokacija{
+    font-family: "Klavika-Light";
+}
+#footer-location .container .child .univerza{
+    font-family: "Klavika-Light";
+    letter-spacing: 0.3px;
+}
+#footer-location .container .child .naziv{
+    /*font-family: "Klavika-MediumCond";*/
+    font-family: "Klavika-Medium";
+    font-size:18px;
+    letter-spacing: 0.1px;
+}
+#footer-location .container:not(:first-child) .child{
+	
+	margin-top:30px;
+}
+#footer-production{
+    height:65px;
+    /*background-color: #1c1c1c;*/
+   	background-color: #545454;
+   	padding: 0px 10px;
+    
+}
+
+.heading-centered {
+	font-family:"Klavika-Light";
+	font-size: 30px;
+	color: #333333;
+	text-align: center;
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+
+.dogajanjaGalleryItem {
+	width: 280px;
+}
+
+#bannerBottom {
+	overflow: hidden; /* pri počasnem nalaganju so slike čez nogo */
+	height: 270px;
+	width:100%;
+	/*background-image: url('../images/banner_15.png');*/
+	position: relative;
+}
+
+
+.redDotsUnderline {
+    background-image: linear-gradient(to right, #ff0000 30%, rgba(255, 0, 0, 0) 0%);
+   	background-size: 8px 2px;
+	background-repeat: repeat-x;
+	height: 2px;
+	background-position: left 14px;
+}
+
+.date {
+	background-image: url('../images/nekaj_07.png');
+	width:68px;
+	height:71px;
+	
+	text-align:center;
+	
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center;
+    
+}
+#eventOpis{
+    padding: 15px 0px;
+    margin-top: 10px;
+}
+.event-cont .right-title{
+    width: calc(100% - 100px);
+    float: left;
+    
+    margin-left: 32px;
+}
+
+.event-cont .date .date-day{
+    margin: 0px;
+    font-size: 22px;
+    margin-top: 10px;
+    font-family: "Klavika-Bold";
+    line-height: 22px;
+}
+.event-cont .date .date-month{
+    margin: 0px;
+    margin-top: 2px;
+    font-size: 16px;
+}
+.event-cont .date {
+    float: left; 
+}
+.event-cont #eventNaslov {
+	font-family: "Klavika-Medium";
+    font-size: 30px;
+    line-height: 30px;
+}
+
+
+
+/*.date div:first-child{
+	font-size: 26px;
+	font-family: "Klavika-Bold";
+}*/
+
+.exploration-item {
+	padding-bottom:35px;
+	width:370px;
+	position:relative;
+	
+}
+
+#slider-fri-med-ljudmi-vidno{
+	margin:0px auto;
+	max-width:1160px;
+	position: relative;
+}
+#slider-fri-med-ljudmi{
+	width:calc(100% + 596px);
+	position: absolute;
+	left: -296px;
+}
+#slider-fri-med-ljudmi .bx-wrapper .bx-prev {
+	left: -86px; 
+}
+#slider-fri-med-ljudmi-mobile .bx-wrapper .bx-prev {
+	left: -45px;
+}
+#slider-fri-med-ljudmi .bx-wrapper .bx-next  {
+	right: -86px; 
+}
+#slider-fri-med-ljudmi-mobile .bx-wrapper .bx-next {
+	right: -45px;
+}
+.left-right-align .bx-next{
+    right: 232px !important;
+}
+.left-right-align .bx-prev{
+    left: 232px !important;
+}
+#slider-fri-med-ljudmi .bx-wrapper .bx-controls-direction a, #slider-fri-med-ljudmi-mobile .bx-wrapper .bx-controls-direction a{
+    top: calc(50% - 50px);
+    margin-top: -30px;
+    width: 38px;
+    height: 60px;
+}
+.studentski-izziv-body{
+    font-family:'Klavika-Regular'; 
+    font-size:16px;
+}
+.studentski-izziv-body strong{
+    font-family:'Klavika-Bold';
+}
+.having-flow{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	z-index: 9999;
+	background-color:#fff;
+	opacity:0.9;
+}
+.zamegljen-slider{
+	opacity:0.2;	
+}
+
+
+#TekmovalniDuh-hompage .sub-content div a {
+	text-transform: uppercase;
+}
+
+.height0{
+	max-height: 0px !important;
+	opacity: 0 !important;
+}
+
+.search_800px {
+	display:none;
+}
+
+.bxslider5-mobile {
+	display:none;
+}
+
+#responsive800news, #responsive800events {
+	display:none;
+	margin-left: 56px;
+	margin-right: 56px;
+	margin-top: 50px;
+}
+
+.quotes_second {
+	display: none;
+}
+
+
+  
+  /* ///////////////////////////////////////////////////////////////////// */
+ 
+
+.main-mobile-search {
+	width: 100%;
+    height: 0px;
+    display: none;
+	
+}
+@media screen and (max-width: 1160px){
+    .main-mobile-search {
+	  display: block;
+
+    }
+}
+
+.main-mobile-search-open {
+   
+	margin-bottom: 10px;
+}
+
+.main-mobile-search form > input {
+	width: calc(100% - 20px);
+	color: black;
+	background-color: white;
+	border-bottom: solid 1px black;
+	padding-left: 10px;
+	padding-right: 10px;
+	-webkit-appearance: none;
+	-webkit-border-radius:0; 
+    border-radius:0;
+}
+.main-mobile-search form {
+	display: block !important;
+}
+
+.latest_projects{
+	border: 4px solid #f2f2f2;
+	padding: 19px 20px 0px 20px;	
+	margin-top:40px;
+}
+.side_block_title{
+	font-family: "Klavika-Regular";
+	font-size: 14px;
+	padding-bottom:19px;
+	border-bottom: 1px solid #e2e2e3;
+}
+
+.latest_projects ul li div:nth-child(1){
+	font-family:"Klavika-Medium";
+}
+
+.latest_projects ul{
+	padding-left:10px;
+	list-style-type: none;
+}
+
+.latest_projects ul li:before{
+	content:"";
+	width:2px;
+	height:2px;
+	left:-9px;
+	top:10px;
+	background: #e12a26;
+	position:absolute;
+	display:block;
+}
+
+.latest_projects ul li{
+	position:relative;
+	margin-bottom:15px;
+}
+
+.latest_projects ul li a:hover{
+	color:#e12a26;
+}
+
+.latest_projects ul li:nth-last-child(1){
+	margin-bottom:0;
+}
+
+.latest_projects .moreText{
+	margin-top:0;
+	padding: 13px 0px;
+}
+
+
+
+.info-uradne-ure {
+	padding-right: 10px;
+}
+
+.info-fri-hours {
+	width: 40%
+}
+
+.telephone-fri {
+	width: 20% !important;
+    float:right;
+}
+
+#footer-mail-contact {
+	width: 20% !important;
+    float:right;
+}
+
