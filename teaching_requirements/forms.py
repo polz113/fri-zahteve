@@ -12,4 +12,3 @@ class ActivityRequirementsForm(ModelForm):
             'requirements': FilteredSelectMultiple(
                 verbose_name="requirements", is_stacked=False)
         }
-

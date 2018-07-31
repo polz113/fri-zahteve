@@ -1,5 +1,4 @@
 {% load i18n %}
-
   <header id="header">
     <div class="wrap">
       <div id="site-name">
@@ -14,9 +13,9 @@
             	  <div class="view-content">
 		            <ul class="menu">
                       {% if request.user.is_authenticated %}
-                      <li class="leaf"><a href={{LOGOUT_URL}}>{% trans "Logout" %}</a></li>
+                      <li class="leaf"><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
                       {% else %}
-                      <li class="leaf"><a href={{LOGIN_URL}}>{% trans "Login" %}</a></li>
+                      <li class="leaf"><a href="{% url "login" %}">{% trans "Login" %}</a></li>
                       {% endif %}
 		            </ul>
                   </div>

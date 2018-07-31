@@ -67,3 +67,10 @@ class Activity(models.Model):
 
     def __str__(self):
         return "{} ({})".format(self.subject.short_name, self.lecture_type)
+
+    def available_classrooms(self):
+        """Get the appropriate classrooms for this activity"""
+        classrooms = Classroom.objects.all()
+        for requirement in self.requirements.all():
+            classrooms = classrooms.filter(resources__pk=requirement.pk)
+        return classrooms

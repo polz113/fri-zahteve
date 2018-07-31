@@ -7,14 +7,16 @@
 {% block body %}
 <h1>Izberi zahteve</h1>
 <div>
-<form action="" method="post">
+  <h2>{{object}}</h2>
+  <div>
+    <form action="" method="post">
 {% csrf_token %}
-<fieldset class="module aligned ">
-<div>
+      <div>
 {{form}}
-</div>
-</fieldset>
-<input type="submit" value="Submit" />
-</form>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  <a href="{% url "resource_create" %}">Ustvari zahtevo</a>
 </div>
 {% endblock %}

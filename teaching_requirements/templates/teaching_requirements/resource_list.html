@@ -20,7 +20,7 @@
   <h3>Na voljo v:</h3>
   <ul>
   {% for classroom in resource.classroom_set.all %}
-    <li>{{classroom}}</li>
+    <li><a href="{% url "classroom_detail" pk=classroom.pk %}">{{classroom}}</a></li>
   {% endfor%}
   </ul>
   </div>

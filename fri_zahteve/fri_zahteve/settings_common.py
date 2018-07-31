@@ -77,6 +77,7 @@ AUTHENTICATION_BACKENDS = (
     'guardian.backends.ObjectPermissionBackend',
 )
 
+LOGIN_REDIRECT_URL = "/activity"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
