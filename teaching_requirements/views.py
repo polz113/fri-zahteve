@@ -43,7 +43,7 @@ class SubjectList(ListView):
     model = Subject
 
 
-class ActivityList(ListView):
+class ActivityList(LoginRequiredMixin, ListView):
     """The main view for listing the activities a user can alter"""
     model = Activity
 

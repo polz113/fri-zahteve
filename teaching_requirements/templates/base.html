@@ -4,19 +4,21 @@
 
 {% load i18n %}
 {% load static %}
+{% load bootstrap4 %}
 
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" type="image/png" href="{% static "images/icon.png" %}"/>
-    <script type="text/javascript" src="/jsi18n/" > </script>
+    <script type="text/javascript" src="/jsi18n/"></script>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 {% block media %}{% endblock %}
 </head>
 
-
 <body>
-<div id="container">
+{% block bootstrap4_content %}
+<div class="container">
   {% include "navigation.html" %}
   <div id="body">
     <div class="wrap">
@@ -31,5 +33,7 @@
     </div>
   </footer>  
 </div>  <!-- Container -->
+
+{% endblock %}
 </body>
 </html>
