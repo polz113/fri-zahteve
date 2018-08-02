@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-02 11:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/navigation.html:10
+msgid "Classes"
+msgstr ""
+
+#: templates/navigation.html:11
+#: templates/teaching_requirements/classroom_list.html:3
+#: templates/teaching_requirements/classroom_list.html:6
+msgid "Classrooms"
+msgstr ""
+
+#: templates/navigation.html:12
+#: templates/teaching_requirements/resource_list.html:4
+msgid "Requirements"
+msgstr ""
+
+#: templates/navigation.html:16
+msgid "Logout"
+msgstr ""
+
+#: templates/navigation.html:18
+msgid "Login"
+msgstr ""
+
+#: templates/teaching_requirements/activity_form.html:5
+#: templates/teaching_requirements/activity_form.html:11
+msgid "Requirements for"
+msgstr ""
+
+#: templates/teaching_requirements/activity_form.html:20
+msgid "Create new requirement"
+msgstr ""
+
+#: templates/teaching_requirements/activity_list.html:4
+msgid "Class requirements list"
+msgstr ""
+
+#: templates/teaching_requirements/activity_list.html:7
+msgid "Class requirements"
+msgstr ""
+
+#: templates/teaching_requirements/activity_list.html:14
+msgid "Available classrooms"
+msgstr ""
+
+#: templates/teaching_requirements/activity_list.html:21
+msgid "No classrooms available"
+msgstr ""
+
+#: templates/teaching_requirements/activity_list.html:25
+msgid "requirements"
+msgstr ""
+
+#: templates/teaching_requirements/activity_list.html:32
+msgid "Change requirements"
+msgstr ""
+
+#: templates/teaching_requirements/classroom_detail.html:4
+msgid "Classroom"
+msgstr ""
+
+#: templates/teaching_requirements/classroom_detail.html:9
+msgid "Available resources"
+msgstr ""
+
+#: templates/teaching_requirements/classroom_list.html:12
+msgid "Resources"
+msgstr ""
+
+#: templates/teaching_requirements/resource_form.html:11
+msgid "Requirement"
+msgstr ""
+
+#: templates/teaching_requirements/resource_list.html:7
+msgid "Possible requirements"
+msgstr ""
+
+#: templates/teaching_requirements/resource_list.html:14
+msgid "Not available in any classroom"
+msgstr ""
+
+#: templates/teaching_requirements/resource_list.html:16
+msgid "Available in"
+msgstr ""
+
+#: templates/teaching_requirements/resource_list.html:25
+msgid "Required for"
+msgstr ""

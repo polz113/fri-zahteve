@@ -1,30 +1,36 @@
 {% extends "base.html" %}
-{% block title %}Izbira predmeta{% endblock %}
+{% load i18n %}
+
+{% block title %}{% trans "Class requirements list" %}{% endblock %}
 {% block body %}
 
-<h1>Podatki o predmetih</h1>
+<h1>{% trans "Class requirements" %}</h1>
 <div>
 {% for activity in object_list %}
-<div>
-  <h2>{{activity.subject.name}} - {{activity.get_lecture_type_display}}</h2>
   <div>
-    <h3>Primerne učilnice</h3>
-    <ul>
-  {% for classroom in activity.available_classrooms %}
-      <li><a href="{% url "classroom_detail" pk=classroom.pk %}">{{classroom}}</a></li>
-  {% endfor%}
-    </ul>  
-  </div> 
-  <div>
-    <h3>Zahteve</h3>
-    <ul>
+    <h2>{{activity.subject.name}} - {{activity.get_lecture_typh3e_display}}</h2>
+    <div>
+  {% if activity.available_classrooms.count %}
+      <h3>{% trans "Available classrooms" %}</h3>
+      <ul>
+    {% for classroom in activity.available_classrooms %}
+        <li><a href="{% url "classroom_detail" pk=classroom.pk %}">{{classroom}}</a></li>
+    {% endfor%}
+      </ul>  
+  {% else %}
+      <h3>{% trans "No classrooms available" %}</h3>
+  {% endif %}
+    </div> 
+    <div>
+      <h3>{% trans "requirements" %}</h3>
+      <ul>
   {% for requirement in activity.requirements.all %}
-      <li>{{requirement}}</li>
+        <li>{{requirement}}</li>
   {% endfor%}
-    </ul>
+      </ul>
+    </div>
+    <a class="change_requirements_link" href="{% url "activity_requirements" pk=activity.pk %}">{% trans "Change requirements" %}</a>
   </div>
-  <a href="{% url "activity_requirements" pk=activity.pk %}">Popravi zahteve</a>
-</div>
 {% endfor %}
 </div>
 {% endblock %}

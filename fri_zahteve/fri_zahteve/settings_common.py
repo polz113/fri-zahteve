@@ -72,10 +72,6 @@ WSGI_APPLICATION = 'fri_zahteve.wsgi.application'
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend', # this is default
-    'guardian.backends.ObjectPermissionBackend',
-)
 
 LOGIN_REDIRECT_URL = "/activity"
 
@@ -98,7 +94,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'sl-si'
 
 TIME_ZONE = 'UTC'
 

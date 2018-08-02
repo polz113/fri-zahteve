@@ -46,6 +46,7 @@ class SubjectList(ListView):
 class ActivityList(LoginRequiredMixin, ListView):
     """The main view for listing the activities a user can alter"""
     model = Activity
+    template = "activity_list.html"
 
     def get_queryset(self):
         try:

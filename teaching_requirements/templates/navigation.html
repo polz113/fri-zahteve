@@ -7,9 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="menu navbar-nav mr-auto">
 {% if request.user.is_authenticated %}
-        <li class="leaf navbar-nav mr-auto"><a href="{% url "activity_list" %}" class="nav-link">{% trans "Subjects" %}</a></li>
+        <li class="leaf navbar-nav mr-auto"><a href="{% url "activity_list" %}" class="nav-link">{% trans "Classes" %}</a></li>
         <li class="leaf navbar-nav mr-auto"><a href="{% url "classroom_list" %}" class="nav-link">{% trans "Classrooms" %}</a></li>
         <li class="leaf navbar-nav mr-auto"><a href="{% url "resource_list" %}" class="nav-link">{% trans "Requirements" %}</a></li>
+  {% if request.user.is_superuser %}
+        <li class="leaf navbar-nav mr-auto"><a href="{% url "admin:index" %}" class="nav-link">Admin</a></li>
+  {% endif %}
         <li class="leaf navbar-nav mr-auto"><a href="{% url "logout" %}" class="nav-link">{% trans "Logout" %}</a></li>
 {% else %}
         <li class="leaf navbar-nav mr-auto"><a href="{% url "login" %}">{% trans "Login" %}</a></li>

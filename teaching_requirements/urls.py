@@ -12,6 +12,8 @@ urlpatterns = [
     #      views.SubjectRequirements.as_view(),
     #      name='subject_requirements'),
     path('activity', views.ActivityList.as_view(), name='activity_list'),
+    path('activity/nojs.html', views.ActivityList.as_view(
+        template="activity_list_nojs.html"), name='activity_list'),
     path('activity/<int:pk>/requirements',
          views.ActivityRequirements.as_view(),
          name='activity_requirements'),

@@ -1,22 +1,24 @@
 {% extends "base.html" %}
-{% block title %}Izbira zahtev{% endblock %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block title %}{% trans "Requirements for" %} {{object}}{% endblock %}
 {% block media %}
 <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
 {{form.media}}
 {% endblock %}
 {% block body %}
-<h1>Izberi zahteve</h1>
+<h1>{% trans "Requirements for" %} {{object}}</h1>
 <div>
-  <h2>{{object}}</h2>
   <div>
     <form action="" method="post">
 {% csrf_token %}
-      <div>
-{{form}}
-      </div>
-      <input type="submit" value="Submit" />
+<div class="form-row">
+{% bootstrap_form form %}
+</div>
+{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
     </form>
   </div>
-  <a href="{% url "resource_create" %}">Ustvari zahtevo</a>
+  <a href="{% url "resource_create" %}">{% trans "Create new requirement" %}</a>
 </div>
 {% endblock %}

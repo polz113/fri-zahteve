@@ -1,18 +1,19 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load bootstrap4 %}
+
 {% block title %}Zahteva{% endblock %}
 {% block media %}
 <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
 {{form.media}}
 {% endblock %}
 {% block body %}
-<h1>Zahteva</h1>
+<h1>{% trans "Requirement" %}</h1>
 <div>
 <form action="" method="post">
 {% csrf_token %}
-<div>
-{{form}}
-</div>
-<input type="submit" value="Submit" />
+{% bootstrap_form form %}
+{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
 </form>
 </div>
 {% endblock %}

@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 # Create your models here.
 ACTIVITYTYPES = (
     ('P', 'Predavanja'),
-    ('L', 'Laboratorijske vaje'),
-    ('A', 'Avditorne vaje'),
+    ('LV', 'Laboratorijske vaje'),
+    ('AV', 'Avditorne vaje'),
 )
 
 
@@ -43,6 +43,7 @@ class Resource(models.Model):
 class Teacher(models.Model):
     """A model extending django.contrib.auth.models.User"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    code = models.CharField(max_length=256, blank=True)
 
     def __str__(self):
         return "{}".format(self.user)
