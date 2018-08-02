@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Classrooms" %}{% endblock %}
+{% block body %}
+
+<h1>{% trans "Classrooms" %}</h1>
+<div>
+{% for classroom in object_list %}
+<div>
+  <h2><a href="{% url "classroom_detail" pk=classroom.pk %}">{{classroom.name}} ({{classroom.short_name}})</a></h2>
+  <div>
+    <h3>{% trans "Resources" %}</h3>
+    <ul>
+  {% for provides in classroom.provides_set.all %}
+      <li>{{provides.resource}} {% if provides.n %}({{provides.n}}){% endif %}</li>
+  {% endfor%}
+    </ul>  
+  </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

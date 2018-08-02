@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Classroom" %} {{object.short_name}}{% endblock %}
+{% block body %}
+
+<h1>{{object.name}} ({{object.short_name}})</h1>
+<div>
+    <h2>{% trans "Available resources" %}</h2>
+    <ul>
+  {% for provides in classroom.provides_set.all %}
+      <li>{{provides.resource}} {% if provides.n %}({{provides.n}}){% endif %}</li>
+  {% endfor%}
+    </ul>
+</div>
+{% endblock %}
