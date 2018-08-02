@@ -1,0 +1,17 @@
+{% block title %}Izbira zahtev{% endblock %}
+{% block media %}
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+{{form.media}}
+{% endblock %}
+{% block body %}
+<h1>Prijava</h1>
+<div>
+    <form action="" method="post">
+{% csrf_token %}
+      <div>
+{{form}}
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+</div>
+{% endblock %}
