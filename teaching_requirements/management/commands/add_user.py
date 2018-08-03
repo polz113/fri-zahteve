@@ -6,10 +6,10 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django_auth_ldap.backend import LDAPBackend
 # from ldap3 import Server, Connection, ALL
+import ldap
 
 from teaching_requirements.models import Teacher
 from django.contrib.auth.models import User
-
 
 def create_single_user(first_name=None, last_name=None,
                        uid=None, code=None, teacher_code=None,
@@ -31,11 +31,11 @@ def create_single_user(first_name=None, last_name=None,
 
     logger.debug("LDAP connecting to {0}".format(settings.AUTH_LDAP_SERVER_URI))
     attributes = ['userprincipalname', 'givenname', 'sn', 'objectclass']
-    server = Server(settings.AUTH_LDAP_SERVER_URI, get_info=ALL)
-    conn = Connection(server, settings.AUTH_LDAP_BIND_DN,
-                      settings.AUTH_LDAP_BIND_PASSWORD, auto_bind=True)
+    conn = ldap.initialize(settings.AUTH_LDAP_SERVER_URI)
+    conn.simple_bind_s(settings.AUTH_LDAP_BIND_DN, settings.AUTH_LDAP_BIND_PASSWORD)
+    # Connection(server, settings.AUTH_LDAP_BIND_DN,
+    #                  settings.AUTH_LDAP_BIND_PASSWORD, auto_bind=True)
     logger.debug("LDAP BIND with username {0}".format(settings.AUTH_LDAP_BIND_DN))
-    time.sleep(1)
     s = settings.AUTH_LDAP_USER_SEARCH
     if uid is None and (first_name is not None and last_name is not None):
         logger.debug("UID is none, trying name based search")
@@ -44,13 +44,9 @@ def create_single_user(first_name=None, last_name=None,
                                                         last_name.encode('cp1250'))
         logger.debug("Filterstring: {0}".format(filterstr))
         try:
-            conn.search(s.base_dn, filterstr, attributes=attributes)
+            results = conn.search_s(s.base_dn, filterstr)
         except Exception:
             logger.debug("Error during LDAP search")
-        try:
-            results = conn.entries
-        except Exception as e:
-            logger.exception("Error fetching results from LDAP")
         logger.debug("Got results: {0}".format(results))
         if len(results) == 0:
             logger.debug("No results found")
@@ -64,26 +60,21 @@ def create_single_user(first_name=None, last_name=None,
         filterstr = "(userprincipalname={0})".format(v)
         logger.debug("Filterstring: {0}".format(filterstr))
         try:
-            conn.search(s.base_dn, filterstr, attributes=attributes)
+            results = conn.search_s(s.base_dn, ldap.SCOPE_SUBTREE, filterstr, attributes)
         except Exception:
             logger.exception("Error during LDAP search")
-        try:
-            results = conn.entries
-        except Exception as e:
-            logger.exception("Error fetching results from LDAP: {0}".format(e))
         logger.debug("Got results: {0}".format(results))
         if len(results) == 0:
             logger.debug("No results found")
             return False
-        res1 = results[0]
-        k = (res1.givenname.value, res1.sn.value)
+        res1 = results[0][1]
+        k = (res1['givenName'][0], res1['sn'][0])
         if first_name is None:
-            # first_name = k[0].decode('cp1250')
-            first_name = k[0]
+            first_name = k[0].decode('cp1250')
             logger.debug("Set first name to {0}".format(first_name))
         if last_name is None:
-            # last_name = k[1].decode('cp1250').upper()
-            last_name = k[1].upper()
+            last_name = k[1].decode('cp1250')
+            # last_name = k[1].upper()
             logger.debug("Set last name to {0}".format(first_name))
 
     logger.debug("Found {} {}: {}".format(
@@ -108,14 +99,14 @@ def create_single_user(first_name=None, last_name=None,
             try:
                 if teacher_code is not None:
                     logger.debug("Creating corresponding teacher")
-                    t = Teacher.objects.get_or_create(code=teacher_code)
+                    t, created = Teacher.objects.get_or_create(
+                        code=teacher_code, defaults={'user_id': u.id})
                     logger.debug("{}".format(t))
-                    t = t[0]
                     old_user = t.user
                     t.user = u
                     logger.debug("Changing user on teacher to {0}".format(u))
                     if write_to_db:
-                        if old_user is not None:
+                        if old_user is not None and old_user.id != u.id:
                             logger.debug("Deleting old user {}".format(old_user))
                             old_user.delete()
                         logger.debug("Saving teacher")
@@ -123,6 +114,7 @@ def create_single_user(first_name=None, last_name=None,
                     else:
                         logger.debug("Teacher not saved: {}".format(t))
             except Exception as e:
+                print(e)
                 logger.exception("Error creating teacher")
             return u
         except:
