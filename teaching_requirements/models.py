@@ -58,6 +58,16 @@ class Subject(models.Model):
     def __str__(self):
         return "{} ({})".format(self.name, self.code)
 
+    def make_short_name(self):
+        """
+        Create short_name from the long one.
+        """
+        if self.short_name == "":
+            ignore = ['IN', 'V', 'Z', 'S']
+            self.short_name = ''.join([s[0] for s in filter(lambda s: s not in ignore, self.name.upper().split())])
+            self.save()
+        return self.short_name
+
 
 class Activity(models.Model):
     """An activity (e.g. lab exercises for Math 101)"""

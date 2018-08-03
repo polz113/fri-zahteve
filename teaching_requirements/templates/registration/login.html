@@ -1,17 +1,24 @@
-{% block title %}Izbira zahtev{% endblock %}
-{% block media %}
-<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
-{{form.media}}
-{% endblock %}
-{% block body %}
-<h1>Prijava</h1>
+{% load static %}
+{% load i18n%}
+{% load bootstrap4 %}
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {{form.media}}
+</head>
+<body>
+{% block bootstrap4_content %}
+<h1>{% trans "Login" %}</h1>
 <div>
     <form action="" method="post">
 {% csrf_token %}
-      <div>
-{{form}}
-      </div>
-      <input type="submit" value="Submit" />
+{% bootstrap_form form %}
+{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
     </form>
 </div>
 {% endblock %}
+</body>
+</html>
