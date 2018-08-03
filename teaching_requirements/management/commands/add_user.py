@@ -5,10 +5,10 @@ import time
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from django_auth_ldap.backend import LDAPBackend
-from ldap3 import Server, Connection, ALL
+# from ldap3 import Server, Connection, ALL
 
-from friprosveta.models import Teacher
-from timetable.models import User
+from teaching_requirements.models import Teacher
+from django.contrib.auth.models import User
 
 
 def create_single_user(first_name=None, last_name=None,
