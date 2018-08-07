@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.translation import ugettext as _
 
 from django.utils.translation import gettext as _
 
@@ -13,8 +14,8 @@ ACTIVITYTYPES = (
 
 class Classroom(models.Model):
     """A classroom"""
-    name = models.CharField(max_length=256)
-    short_name = models.CharField(max_length=32)
+    name = models.CharField(_('name'), max_length=256)
+    short_name = models.CharField(_('short name'), max_length=32)
     resources = models.ManyToManyField('Resource', through='Provides')
 
     def __str__(self):
@@ -35,8 +36,8 @@ class Provides(models.Model):
 
 class Resource(models.Model):
     """Anything that might be present in a classroom"""
-    name = models.CharField(max_length=256)
-    description = models.TextField(blank=True)
+    name = models.CharField(_('name'), max_length=256)
+    description = models.TextField(_('description'), blank=True)
 
     def __str__(self):
         return "{}".format(self.name)
@@ -53,22 +54,12 @@ class Teacher(models.Model):
 
 class Subject(models.Model):
     """e. g. Math 101"""
-    code = models.CharField(max_length=16, blank=True, unique=True)
-    name = models.CharField(max_length=256)
-    short_name = models.CharField(max_length=32, blank=True, default="")
+    code = models.CharField(_('code'), max_length=16, blank=True, unique=True)
+    name = models.CharField(_('name'), max_length=256)
+    short_name = models.CharField(_('short name'), max_length=32, blank=True, default="")
 
     def __str__(self):
         return "{} ({})".format(self.name, self.code)
-
-    def make_short_name(self):
-        """
-        Create short_name from the long one.
-        """
-        if self.short_name == "":
-            ignore = ['IN', 'V', 'Z', 'S']
-            self.short_name = ''.join([s[0] for s in filter(lambda s: s not in ignore, self.name.upper().split())])
-            self.save()
-        return self.short_name
 
 
 class Activity(models.Model):

@@ -20,6 +20,23 @@ class ResourceCreate(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("resource_list")
 
 
+class ResourceCreateAddToActivity(LoginRequiredMixin, CreateView):
+    model = Resource
+    fields = ('name', 'description')
+
+    def get_success_url(self):
+        try:
+            activity = Activity.objects.get(pk=self.kwargs['pk'])
+            teacher = self.request.user.teacher
+            assert activity.teachers.filter(pk=teacher.pk).count() > 0
+            self.activity = activity
+            # self.raise_exception = False
+            self.activity.requirements.add(self.object)
+        except Exception as e:
+            raise PermissionDenied
+        return reverse_lazy("activity_list")
+
+
 class ResourceUpdate(LoginRequiredMixin, UpdateView):
     model = Resource
     fields = ('name', 'description')

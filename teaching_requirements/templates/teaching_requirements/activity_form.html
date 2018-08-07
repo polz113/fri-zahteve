@@ -19,6 +19,6 @@
 {% buttons submit='OK' %}{% endbuttons %}
     </form>
   </div>
-  <a href="{% url "resource_create" %}">{% trans "Create new requirement" %}</a>
+  <a href="{% url "activity_add_requirement" pk=object.pk %}">{% trans "Create new requirement" %}</a>
 </div>
 {% endblock %}
