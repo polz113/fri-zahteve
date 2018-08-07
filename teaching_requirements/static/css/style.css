@@ -173,6 +173,10 @@ div.loginform {
     margin-left: 10em;
 }
 
+.mainlistitem {
+    margin-bottom: 3em;
+}
+
 table.table > tbody > tr > th,
 table.table > tbody > tr > td,
 table.table > thead > tr > th,

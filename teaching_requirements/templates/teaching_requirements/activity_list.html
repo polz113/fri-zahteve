@@ -7,8 +7,8 @@
 <h1>{% trans "Class requirements" %}</h1>
 <div>
 {% for activity in object_list %}
-  <div>
-    <h2>{{activity.subject.name}} - {{activity.get_lecture_typh3e_display}}</h2>
+  <div class="mainlistitem">
+    <h2>{{activity.subject.name}} - {{activity.get_lecture_type_display}}</h2>
     <div>
   {% if activity.available_classrooms.count %}
       <h3>{% trans "Available classrooms" %}</h3>
@@ -29,7 +29,7 @@
   {% endfor%}
       </ul>
     </div>
-    <a class="change_requirements_link" href="{% url "activity_requirements" pk=activity.pk %}">{% trans "Change requirements" %}</a>
+    <a class="change_requirements_link btn btn-primary active" href="{% url "activity_requirements" pk=activity.pk %}">{% trans "Change requirements" %}</a>
   </div>
 {% endfor %}
 </div>
