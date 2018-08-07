@@ -71,7 +71,7 @@ Year is the first part in the study year:
                 short_name = make_short_name(subject_name)
                 subject, created = Subject.objects.get_or_create(
                     code = subject_code,
-                    defaults = {'name': subject_name, 'short_name': subject_name})
+                    defaults = {'name': subject_name, 'short_name': short_name})
                 if not created:
                     subject.name = subject_name
                     subject.short_name = short_name

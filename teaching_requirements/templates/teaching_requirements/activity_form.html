@@ -16,7 +16,7 @@
 <div class="form-row">
 {% bootstrap_form form %}
 </div>
-{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+{% buttons submit='OK' %}{% endbuttons %}
     </form>
   </div>
   <a href="{% url "activity_add_requirement" pk=object.pk %}">{% trans "Create new requirement" %}</a>

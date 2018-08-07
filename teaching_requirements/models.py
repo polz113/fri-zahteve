@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
+from django.utils.translation import gettext as _
+
 # Create your models here.
 ACTIVITYTYPES = (
     ('P', 'Predavanja'),
@@ -65,7 +67,8 @@ class Activity(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     lecture_type = models.CharField(max_length=16, choices=ACTIVITYTYPES)
     teachers = models.ManyToManyField(Teacher)
-    requirements = models.ManyToManyField(Resource, blank=True)
+    requirements = models.ManyToManyField(
+        Resource, verbose_name=_("Requirements"), blank=True)
 
     def __str__(self):
         return "{} ({})".format(self.subject.short_name, self.lecture_type)
