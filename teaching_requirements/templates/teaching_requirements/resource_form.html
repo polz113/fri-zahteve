@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load bootstrap4 %}
 
-{% block title %}Zahteva{% endblock %}
+{% block title %}{% trans "Requirement" %}{% endblock %}
 {% block media %}
 <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
 {{form.media}}
@@ -13,7 +13,7 @@
 <form action="" method="post">
 {% csrf_token %}
 {% bootstrap_form form %}
-{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+{% buttons submit='OK' %}{% endbuttons %}
 </form>
 </div>
 {% endblock %}
