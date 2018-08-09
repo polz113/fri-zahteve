@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-04 20:43+0000\n"
+"POT-Creation-Date: 2018-08-09 13:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,48 +17,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: forms.py:14 templates/teaching_requirements/activity_list.html:25
+#: forms.py:14 templates/teaching_requirements/activity_list.html:13
 msgid "requirements"
 msgstr "zahteve"
 
-#: models.py:15 models.py:37 models.py:56
+#: models.py:17 models.py:39 models.py:69
 msgid "name"
 msgstr "naziv"
 
-#: models.py:16 models.py:57
+#: models.py:18 models.py:70
 msgid "short name"
 msgstr "kratek naziv"
 
-#: models.py:38
+#: models.py:40
 msgid "description"
 msgstr "opis"
 
-#: models.py:55
+#: models.py:68
 msgid "code"
 msgstr "koda"
+
+#: models.py:82 templates/navigation.html:11
+#: templates/teaching_requirements/resource_list.html:4
+msgid "Requirements"
+msgstr "Zahteve"
 
 #: templates/navigation.html:10
 msgid "Classes"
 msgstr "Predmeti"
 
-#: templates/navigation.html:11
-#: templates/teaching_requirements/classroom_list.html:3
-#: templates/teaching_requirements/classroom_list.html:6
-msgid "Classrooms"
-msgstr "Učilnice"
-
-#: templates/navigation.html:12
-#: templates/teaching_requirements/resource_list.html:4
-msgid "Requirements"
-msgstr "Zahteve"
-
-#: templates/navigation.html:16
+#: templates/navigation.html:15
 msgid "Logout"
 msgstr "Odjava"
 
-#: templates/navigation.html:18 templates/registration/login.html:14
+#: templates/navigation.html:17 templates/registration/login.html:16
 msgid "Login"
 msgstr "Prijava"
+
+#: templates/registration/logout.html:6
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: templates/registration/logout.html:8
+msgid "Log in again"
+msgstr ""
 
 #: templates/teaching_requirements/activity_form.html:5
 #: templates/teaching_requirements/activity_form.html:11
@@ -77,15 +79,13 @@ msgstr "Seznam zahtev predmeta"
 msgid "Class requirements"
 msgstr "Zahteve predmeta"
 
-#: templates/teaching_requirements/activity_list.html:14
-msgid "Available classrooms"
-msgstr "Primerne učilnice"
+#: templates/teaching_requirements/activity_list.html:16
+#: templates/teaching_requirements/resourcecomment_form.html:5
+#: templates/teaching_requirements/resourcecomment_form.html:11
+msgid "Comment"
+msgstr "Komentar"
 
-#: templates/teaching_requirements/activity_list.html:21
-msgid "No classrooms available"
-msgstr "Ni primernih učilnic"
-
-#: templates/teaching_requirements/activity_list.html:32
+#: templates/teaching_requirements/activity_list.html:20
 msgid "Change requirements"
 msgstr "Spremeni zahteve"
 
@@ -97,26 +97,47 @@ msgstr "Učilnica"
 msgid "Available resources"
 msgstr "Oprema na voljo"
 
+#: templates/teaching_requirements/classroom_list.html:3
+#: templates/teaching_requirements/classroom_list.html:6
+msgid "Classrooms"
+msgstr "Učilnice"
+
 #: templates/teaching_requirements/classroom_list.html:12
 msgid "Resources"
 msgstr "Oprema"
 
+#: templates/teaching_requirements/resource_detail.html:4
+#: templates/teaching_requirements/resource_form.html:5
 #: templates/teaching_requirements/resource_form.html:11
 msgid "Requirement"
 msgstr "Zahteva"
+
+#: templates/teaching_requirements/resource_detail.html:12
+#, fuzzy
+#| msgid "Required for"
+msgid "Required by"
+msgstr "Potrebno za"
+
+#: templates/teaching_requirements/resource_detail.html:20
+msgid "Comments"
+msgstr "Komentarji"
 
 #: templates/teaching_requirements/resource_list.html:7
 msgid "Possible requirements"
 msgstr "Možne zahteve"
 
-#: templates/teaching_requirements/resource_list.html:14
-msgid "Not available in any classroom"
-msgstr "Ni na voljo v nobeni učilnici"
-
-#: templates/teaching_requirements/resource_list.html:16
-msgid "Available in"
-msgstr "Na voljo v"
-
-#: templates/teaching_requirements/resource_list.html:25
+#: templates/teaching_requirements/resource_list.html:13
 msgid "Required for"
 msgstr "Potrebno za"
+
+#~ msgid "Available classrooms"
+#~ msgstr "Primerne učilnice"
+
+#~ msgid "No classrooms available"
+#~ msgstr "Ni primernih učilnic"
+
+#~ msgid "Not available in any classroom"
+#~ msgstr "Ni na voljo v nobeni učilnici"
+
+#~ msgid "Available in"
+#~ msgstr "Na voljo v"
