@@ -10,22 +10,10 @@
   <div class="mainlistitem">
     <h2>{{activity.subject.name}} - {{activity.get_lecture_type_display}}</h2>
     <div>
-  {% if activity.available_classrooms.count %}
-      <h3>{% trans "Available classrooms" %}</h3>
-      <ul>
-    {% for classroom in activity.available_classrooms %}
-        <li><a href="{% url "classroom_detail" pk=classroom.pk %}">{{classroom}}</a></li>
-    {% endfor%}
-      </ul>  
-  {% else %}
-      <h3>{% trans "No classrooms available" %}</h3>
-  {% endif %}
-    </div> 
-    <div>
       <h3>{% trans "requirements" %}</h3>
       <ul>
   {% for requirement in activity.requirements.all %}
-        <li>{{requirement}}</li>
+        <li>{{requirement}} <a class="btn" href="{% url "resource_comment" resource_pk=requirement.pk %}">{% trans "Comment" %}</a></li>
   {% endfor%}
       </ul>
     </div>

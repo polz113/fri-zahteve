@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Requirement" %} {{object.name}}{% endblock %}
+{% block body %}
+
+<h1>{{object.name}}</h1>
+<div>
+{{object.description}}
+</div>
+<div>
+  <h2>{% trans "Required by" %}</h2>
+  <ul>
+  {% for activity in resource.activity_set.all %}
+      <li>{{activity}}</li>
+  {% endfor%}
+  </ul>
+</div>
+<div>
+    <h2>{% trans "Comments" %}</h2>
+  {% for comment in object.resourcecomment_set.all %}
+      <div>
+        <h3>{{comment.teacher}}</h3>
+        <div>{{comment.text}}</div>
+      </div>
+  {% endfor%}
+</div>
+{% endblock %}

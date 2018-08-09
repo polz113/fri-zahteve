@@ -8,19 +8,7 @@
 <div>
 {% for resource in object_list %}
 <div>
-  <h2>{{resource.name}}</h2>
-  <div>
-  {% if not resource.classroom_set.count %}
-  <h3>{% trans "Not available in any classroom" %}</h3>
-  {% else %}
-  <h3>{% trans "Available in" %}</h3>
-  <ul>  
-    {% for classroom in resource.classroom_set.all %}
-    <li><a href="{% url "classroom_detail" pk=classroom.pk %}">{{classroom}}</a></li>
-    {% endfor%}
-  </ul>
-  {% endif %}
-  </div>
+  <h2><a href="{% url "resource_detail" pk=resource.pk %}">{{resource.name}}</a></h2>
   <div>
   <h3>{% trans "Required for" %}</h3>
   <ul>

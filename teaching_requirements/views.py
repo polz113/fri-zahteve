@@ -9,7 +9,7 @@ from django.db.models.functions import Lower
 from django.contrib.auth.mixins import LoginRequiredMixin, AccessMixin
 from django.core.exceptions import PermissionDenied
 
-from .models import Resource, Classroom, Subject, Activity
+from .models import Resource, Classroom, Subject, Activity, ResourceComment
 from .forms import ActivityRequirementsForm
 # Create your views here.
 
@@ -35,6 +35,31 @@ class ResourceCreateAddToActivity(LoginRequiredMixin, CreateView):
         except Exception as e:
             raise PermissionDenied
         return reverse_lazy("activity_list")
+
+
+class ResourceDetail(LoginRequiredMixin, DetailView):
+    model = Resource
+
+
+class ResourceCommentUpdate(LoginRequiredMixin, UpdateView):
+    model = ResourceComment
+    fields = ('text', )
+    success_url = reverse_lazy("activity_list")
+
+    def get_object(self, queryset=None):
+        if queryset is None:
+            queryset = self.get_queryset()
+        try:
+            teacher_id = self.request.user.teacher.id
+            resource_id = self.kwargs['resource_pk']
+            obj, created = ResourceComment.objects.get_or_create(
+                teacher_id=teacher_id,
+                resource_id=resource_id, 
+            )
+        except Exception as e:
+            raise e
+            raise PermissionDenied
+        return obj
 
 
 class ResourceUpdate(LoginRequiredMixin, UpdateView):

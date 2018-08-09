@@ -52,6 +52,17 @@ class Teacher(models.Model):
         return "{}".format(self.user)
 
 
+class ResourceComment(models.Model):
+    """Users may leave a comment with each resource"""
+ 
+    teacher = models.ForeignKey('Teacher', on_delete=models.CASCADE)
+    resource = models.ForeignKey('Resource', on_delete=models.CASCADE)
+    text = models.TextField()
+
+    def __str__(self):
+        return "{}-{}".format(self.teacher, self.resource)
+
+
 class Subject(models.Model):
     """e. g. Math 101"""
     code = models.CharField(_('code'), max_length=16, blank=True, unique=True)
