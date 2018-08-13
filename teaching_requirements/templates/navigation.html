@@ -11,6 +11,7 @@
         <li class="leaf navbar-nav mr-auto"><a href="{% url "resource_list" %}" class="nav-link">{% trans "Requirements" %}</a></li>
   {% if request.user.is_superuser %}
         <li class="leaf navbar-nav mr-auto"><a href="{% url "admin:index" %}" class="nav-link">Admin</a></li>
+        <li class="leaf navbar-nav mr-auto"><a href="{% url "subject_list" %}" class="nav-link">{% trans "Overview" %}</a></li>
   {% endif %}
         <li class="leaf navbar-nav mr-auto"><a href="{% url "logout" %}" class="nav-link">{% trans "Logout" %}</a></li>
 {% else %}

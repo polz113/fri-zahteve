@@ -15,13 +15,16 @@
 <div>
     <table class="subjects_cycles_overview">
         <tr>
-            <th>predmet</th><th>tip</th>
+            <th>predmet</th><th>tip</th><th>izvajalci</th><th>zahteve</th>
         </tr>
 {% for subject in object_list %}
   {% for activity in subject.activity_set.all %}
        <tr>
            <td>{{subject.name}}</td>
            <td>{{activity.lecture_type}}</td>
+           <td>{% for teacher in activity.teachers.all%}{{teacher}} {% endfor %}</td>
+           <td>{% for requirement in activity.requirements.all %}{{requirement}} {% endfor %}</td>
+
        </tr>
   {% endfor %}
 {% endfor %}
