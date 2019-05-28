@@ -36,6 +36,8 @@ class Provides(models.Model):
 
 class Resource(models.Model):
     """Anything that might be present in a classroom"""
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(_('name'), max_length=256)
     description = models.TextField(_('description'), blank=True)
 
@@ -55,6 +57,8 @@ class Teacher(models.Model):
 class ResourceComment(models.Model):
     """Users may leave a comment with each resource"""
  
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     teacher = models.ForeignKey('Teacher', on_delete=models.CASCADE)
     resource = models.ForeignKey('Resource', on_delete=models.CASCADE)
     text = models.TextField()

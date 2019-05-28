@@ -71,6 +71,9 @@ class ResourceUpdate(LoginRequiredMixin, UpdateView):
 class ResourceList(ListView):
     model = Resource
 
+class ResourceAdminOverview(ListView):
+    model = Resource
+    template_name = 'teaching_requirements/resource_admin_overview.html'
 
 class ClassroomList(ListView):
     model = Classroom

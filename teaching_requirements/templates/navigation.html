@@ -10,8 +10,9 @@
         <li class="leaf navbar-nav mr-auto"><a href="{% url "activity_list" %}" class="nav-link">{% trans "Classes" %}</a></li>
         <li class="leaf navbar-nav mr-auto"><a href="{% url "resource_list" %}" class="nav-link">{% trans "Requirements" %}</a></li>
   {% if request.user.is_superuser %}
+        <li class="leaf navbar-nav mr-auto"><a href="{% url "resource_admin_overview" %}" class="nav-link">{% trans "Req. table" %}</a></li>
         <li class="leaf navbar-nav mr-auto"><a href="{% url "admin:index" %}" class="nav-link">Admin</a></li>
-        <li class="leaf navbar-nav mr-auto"><a href="{% url "subject_list" %}" class="nav-link">{% trans "Overview" %}</a></li>
+        <li class="leaf navbar-nav mr-auto"><a href="{% url "subject_list" %}" class="nav-link">{% trans "Subjects" %}</a></li>
   {% endif %}
         <li class="leaf navbar-nav mr-auto"><a href="{% url "logout" %}" class="nav-link">{% trans "Logout" %}</a></li>
 {% else %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Requirements" %}{% endblock %}
+{% block body %}
+
+<h1>{% trans "Possible requirements" %}</h1>
+<div>
+<table>
+    <tr>
+        <th>{% trans "Name" %}</th>
+	<th>{% trans "Required by" %}</th>
+	<th>{% trans "Comments" %}</th>
+    </tr>
+{% for resource in object_list %}
+    <tr>
+	    <td>{{resource.name}}</td>
+        <td>
+    {% for activity in resource.activity_set.all %}
+            {{activity.subject.short_name}}
+    {% endfor%}
+	</td>
+        <td>
+    {% for comment in resource.resourcecomment_set.all %}
+            {{comment.text}}
+    {% endfor%}
+	</td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

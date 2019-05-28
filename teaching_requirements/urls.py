@@ -25,6 +25,8 @@ urlpatterns = [
     path('classroom/<int:pk>',
          views.ClassroomDetail.as_view(), name='classroom_detail'),
     path('resource', views.ResourceList.as_view(), name='resource_list'),
+    path('resource_admin_overview', views.ResourceAdminOverview.as_view(), 
+         name='resource_admin_overview'),
     path('resource/create', views.ResourceCreate.as_view(),
          name='resource_create'),
     path('resource/<int:resource_pk>/add_comment',
