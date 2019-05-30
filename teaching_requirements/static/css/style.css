@@ -186,6 +186,11 @@ table.table > tfoot > tr > td {
     border-top: none;
 }
 
+table {
+    border-spacing: 1em;
+    border-collapse: separate;
+}
+
 fieldset legend {
     border-style: none none dotted;
     line-height: 30px;

@@ -71,9 +71,13 @@ class ResourceUpdate(LoginRequiredMixin, UpdateView):
 class ResourceList(ListView):
     model = Resource
 
+
 class ResourceAdminOverview(ListView):
     model = Resource
     template_name = 'teaching_requirements/resource_admin_overview.html'
+    # ordering = ['-updated_at', '-resourcecomment__updated_at']
+    ordering = ['-resourcecomment__updated_at', '-updated_at']
+
 
 class ClassroomList(ListView):
     model = Classroom
