@@ -1,10 +1,13 @@
 backcall==0.1.0
 backports.csv==1.0.7
+bootstrap4==0.1.0
 decorator==4.4.0
 defusedxml==0.6.0
 diff-match-patch==20181111
 Django==2.2.2
+django-auth-ldap==1.7.0
 django-bootstrap4==0.0.8
+django-easy-audit==1.1
 django-impersonate==1.4.1
 django-import-export==1.2.0
 et-xmlfile==1.0.1
@@ -19,8 +22,12 @@ pexpect==4.7.0
 pickleshare==0.7.5
 pkg-resources==0.0.0
 prompt-toolkit==2.0.9
+psycopg2==2.8.2
 ptyprocess==0.6.0
+pyasn1==0.4.5
+pyasn1-modules==0.2.5
 Pygments==2.4.2
+python-ldap==3.2.0
 pytz==2019.1
 PyYAML==5.1.1
 simplegeneric==0.8.1
