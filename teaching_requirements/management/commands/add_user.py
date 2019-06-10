@@ -11,9 +11,11 @@ import ldap
 from teaching_requirements.models import Teacher
 from django.contrib.auth.models import User
 
+
 def create_single_user(first_name=None, last_name=None,
                        uid=None, code=None, teacher_code=None,
-                       write_to_db=False, out_stream=sys.stdout):
+                       write_to_db=False, out_stream=sys.stdout,
+                       name_encoding='utf-8'):
     """
     Add a new user, create a Teacher object.
     """
@@ -40,8 +42,8 @@ def create_single_user(first_name=None, last_name=None,
     if uid is None and (first_name is not None and last_name is not None):
         logger.debug("UID is none, trying name based search")
         k = (first_name, last_name)
-        filterstr = '(&(givenName={0})(sn={1}))'.format(first_name.encode('cp1250'),
-                                                        last_name.encode('cp1250'))
+        filterstr = '(&(givenName={0})(sn={1}))'.format(first_name.encode(name_encoding),
+                                                        last_name.encode(name_encoding))
         logger.debug("Filterstring: {0}".format(filterstr))
         try:
             results = conn.search_s(s.base_dn, filterstr)
@@ -70,10 +72,10 @@ def create_single_user(first_name=None, last_name=None,
         res1 = results[0][1]
         k = (res1['givenName'][0], res1['sn'][0])
         if first_name is None:
-            first_name = k[0].decode('cp1250')
+            first_name = k[0].decode(name_encoding)
             logger.debug("Set first name to {0}".format(first_name))
         if last_name is None:
-            last_name = k[1].decode('cp1250')
+            last_name = k[1].decode(name_encoding)
             # last_name = k[1].upper()
             logger.debug("Set last name to {0}".format(first_name))
 
