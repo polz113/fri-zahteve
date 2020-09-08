@@ -101,8 +101,12 @@ def create_single_user(first_name=None, last_name=None,
             try:
                 if teacher_code is not None:
                     logger.debug("Creating corresponding teacher")
-                    t, created = Teacher.objects.get_or_create(
-                        code=teacher_code, defaults={'user_id': u.id})
+                    if hasattr(u, "teacher"):
+                        t = u.teacher
+                        t.code = teacher_code
+                    else:
+                        t, created = Teacher.objects.get_or_create(
+                            code=teacher_code, defaults={'user_id': u.id})
                     logger.debug("{}".format(t))
                     old_user = t.user
                     t.user = u

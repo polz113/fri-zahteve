@@ -88,10 +88,10 @@ Year is the first part in the study year:
                     ucitelji_po_upn[upn] = ucitelj
         for upn, codes in odgovorni.items():
             teacher_code = ucitelji_po_upn[upn]['sifra_predavatelja']
+            print("Creating", upn, teacher_code)
             create_single_user(
                 uid=upn, write_to_db=True, 
                 teacher_code=teacher_code)
-            print(upn, teacher_code)
             teacher = Teacher.objects.get(code=teacher_code)
             for code, lecture_type in codes:
                 activity, created = Activity.objects.get_or_create(
