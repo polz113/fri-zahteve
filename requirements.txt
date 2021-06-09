@@ -4,7 +4,7 @@ bootstrap4==0.1.0
 decorator==4.4.0
 defusedxml==0.6.0
 diff-match-patch==20181111
-Django==2.2.13
+Django==2.2.22
 django-auth-ldap==1.7.0
 django-bootstrap4==0.0.8
 django-easy-audit==1.1
