@@ -27,7 +27,7 @@ ptyprocess==0.6.0
 pyasn1==0.4.5
 pyasn1-modules
 Pygments==2.7.4
-python-ldap==3.4.0
+python-ldap==3.4.5
 pytz==2019.1
 PyYAML==5.4
 simplegeneric==0.8.1
