@@ -24,7 +24,7 @@ pkg-resources==0.0.0
 prompt-toolkit==2.0.9
 psycopg2==2.8.2
 ptyprocess==0.6.0
-pyasn1==0.4.5
+pyasn1==0.6.3
 pyasn1-modules
 Pygments==2.7.4
 python-ldap==3.4.0
