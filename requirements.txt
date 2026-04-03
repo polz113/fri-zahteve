@@ -26,7 +26,7 @@ psycopg2==2.8.2
 ptyprocess==0.6.0
 pyasn1==0.6.3
 pyasn1-modules
-Pygments==2.7.4
+Pygments==2.20.0
 python-ldap==3.4.5
 pytz==2019.1
 PyYAML==5.4
